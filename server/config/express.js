@@ -50,8 +50,8 @@ exports.default = function (app) {
    * Lusca - express server security
    * https://github.com/krakenjs/lusca
    */
-  if (env !== 'test' && !process.env.SAUCE_USERNAME) {
-    app.use((0, _lusca2.default)({
+  /*if (env !== 'test' && !process.env.SAUCE_USERNAME) {
+    app.use(lusca({
       csrf: {
         angular: true
       },
@@ -63,7 +63,7 @@ exports.default = function (app) {
       },
       xssProtection: true
     }));
-  }
+  }*/
 
   if ('development' === env) {
     app.use(require('connect-livereload')({
