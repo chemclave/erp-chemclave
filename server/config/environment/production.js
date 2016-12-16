@@ -1,11 +1,7 @@
 'use strict';
 
 // Production specific configuration
-// =================================
-
-var conf = JSON.parse(process.env.APP_CONFIG);
-
-var mongoPassword = 'y7uy7uy7u';
+// ================================= 
 
 module.exports = {
         // Server IP
@@ -16,7 +12,7 @@ module.exports = {
 
         // MongoDB connection options
         mongo: {
-                uri: process.env.MONGODB_URI || process.env.MONGOHQ_URL || process.env.OPENSHIFT_MONGODB_DB_URL + process.env.OPENSHIFT_APP_NAME || "mongodb://" + conf.mongo.user + ":" + mongoPassword + "@" + conf.mongo.hostString
+                uri: process.env.MONGODB_URI || process.env.MONGOHQ_URL || process.env.OPENSHIFT_MONGODB_DB_URL + process.env.OPENSHIFT_APP_NAME || 'mongodb://localhost/erpchemclave'
         }
 };
 //# sourceMappingURL=production.js.map
